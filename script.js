@@ -1,7 +1,9 @@
 let firstArray = [];
 // console.log(typeof firstArray);
-firstArray = [98, 'Terve kaikille', false, 123n, undefined, null, {age:18, height:163, sex:'female'}, Symbol('Bio')];
+firstArray = [123n, undefined, null, Symbol('Bio')];
 
+firstArray.push(prompt('Введите слово'));
 firstArray.push(+prompt('Введите число'));
-firstArray.push(String(firstArray[8]));
+firstArray.push(confirm('Do you conrirm?'));
+firstArray.push({age:+prompt('enter the age'), name:prompt('enter the name')});
 console.log(firstArray);
