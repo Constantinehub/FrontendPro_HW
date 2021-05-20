@@ -33,10 +33,26 @@ console.log(arr);
 #   это не обязательно должен быть символ операции (+, -, *, /, %) может быть и текст.
 # - использовать if else или switch case для вызова необходимой функции.
 */
-let Result;
-let a = prompt('Enter first number: ', 10);
-let b = prompt('Enter second number: ', 2);
-let choice = prompt('What to do with numbers: +, -, *, /, %(add, subtract, multiply, divide, divide modulo)');
+let num1 = prompt('Enter first number:');
+num1 = Number(num1);
+let num2 = prompt('Enter second number:');
+num2 = Number(num2);
+let operator = prompt('Mathematical action: (/, +, *, -, %)');
 
-if(choice === '+' || 'add'){
-    Result =
+switch (operator) {
+    case '+':
+        console.log(num1 + num2);
+        break;
+    case '-':
+        console.log(num1 - num2);
+        break;
+    case '/':
+        console.log(num1 / num2);
+        break;
+    case '*':
+        console.log(num1 * num2);
+        break;
+    case '%':
+        console.log(num1 % num2);
+        break;
+     }
