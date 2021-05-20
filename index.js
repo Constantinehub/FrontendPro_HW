@@ -39,5 +39,4 @@ let b = prompt('Enter second number: ', 2);
 let choice = prompt('What to do with numbers: +, -, *, /, %(add, subtract, multiply, divide, divide modulo)');
 
 if(choice === '+' || 'add'){
-    Result = a + b;
-}
+    Result =
