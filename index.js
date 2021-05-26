@@ -37,8 +37,8 @@ for( let i=0; i<data.length; i++){
 //Task 2
 
 for(let i=0; i<data.length; i++){
-    if(typeof(data[i])==='object' && data[i] !== null){
-        console.log(data[i]);
+    if(typeof(data[i])==='object' && data[i] !== null){ // null тоже имеет тип обьекта, но так как он не является полноценным обьектом я решила его исключить при выводе
+        console.log(data[i], ', index -' , i);
     }
 }
 
@@ -61,9 +61,8 @@ let personInfo = {
 }
 
 for (let key in personInfo) {
-	personInfo[key] = prompt(key, 'your answer');
-}
-
+	personInfo[key] = prompt(key, 'your answer'); // кода минимум, но таким образом не контролируем какие данные вводятся в обьект
+    //если необходимо контролировать,то делаем отдельные промпты, приводим к нужному типу, выполняем проверки
 console.log(personInfo);
 
 
