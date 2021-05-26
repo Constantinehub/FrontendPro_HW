@@ -14,6 +14,7 @@
 // Необходимо => используя все тот же цикл for а так же логические операторы
 // вывести в консоль только те элементы массива которые являются или объектом (object) или массивом
 
+//Task 1
 const data = [
     null,
     undefined,
@@ -25,6 +26,22 @@ const data = [
     { itIsObject: true },
     [0, 11, 22, 33],
 ];
+
+for( let i=0; i<data.length; i++){
+    if(!data[i]){
+        console.log(data[i], ', index -' , i);
+    };
+};
+
+
+//Task 2
+
+for(let i=0; i<data.length; i++){
+    if(typeof(data[i])==='object' && data[i] !== null){ // null тоже имеет тип обьекта, но так как он не является полноценным обьектом я решила его исключить при выводе
+        console.log(data[i], ', index -' , i);
+    }
+}
+
 
 // Задача №3
 // Существует пустой объект 'personInfo'
@@ -42,5 +59,10 @@ let personInfo = {
     isMarried: null,
     hasChildren: null,
 }
+
+for (let key in personInfo) {
+	personInfo[key] = prompt(key, 'your answer'); // кода минимум, но таким образом не контролируем какие данные вводятся в обьект
+    //если необходимо контролировать,то делаем отдельные промпты, приводим к нужному типу, выполняем проверки
+console.log(personInfo);
 
 
